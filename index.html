@@ -9,6 +9,22 @@
 </head>
 
 <body>
+    <div class="timezone-container">
+        <label for="timezone">Choose Time Zone:</label>
+        <select id="timezone">
+            <option value="Local">Local Time</option>
+            <option value="Asia/Tokyo">Tokyo (JST)</option>
+            <option value="Asia/Singapore">Singapore (SGT)</option>
+            <option value="Asia/Kolkata">Kolkata (IST)</option>
+            <option value="Asia/Kolkata">Delhi (IST)</option>
+            <option value="Europe/Zurich">Zurich (CET)</option>
+            <option value="Europe/Rome">Milan (CET)</option>
+            <option value="Europe/London">London (GMT)</option>
+            <option value="America/New_York">New York (EST)</option>
+            <option value="America/Vancouver">Williams Lake (PT)</option>
+        </select>
+    </div>
+    
     <div id="headline" class="headline">Checking Another Hour status...</div>
 
     <div class="clock-container">
@@ -19,6 +35,9 @@
             <div class="hand hour-hand"></div>
 
             <!-- Numbers 1 to 24 and "A" for Another Hour -->
+            <div class="number" style="--n: 1;"><span>1</span></div>
+            <div class="number" style="--n: 2;"><span>2</span></div>
+            <div class="number" style="--n: 3;"><span>3</span></div>
             <div class="number" style="--n: 1;"><span>1</span></div>
             <div class="number" style="--n: 2;"><span>2</span></div>
             <div class="number" style="--n: 3;"><span>3</span></div>
@@ -52,9 +71,10 @@
         <div id="time-display-25">Another Hour Time: --:--:--</div>
         <div id="remaining-time">You have another --:-- today</div>
     </div>
+    <script src="https://momentjs.com/downloads/moment.min.js"></script>
+    <script src="https://momentjs.com/downloads/moment-timezone-with-data.min.js"></script>
     <script src="script.js"></script>
 
 </body>
-
 
 </html>
