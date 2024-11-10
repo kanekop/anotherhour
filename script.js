@@ -58,7 +58,9 @@ function updateClock() {
     // Display the remaining time
     document.getElementById('remaining-time').textContent = `You have another ${String(remainingMinutes).padStart(2, '0')}:${String(remainingSeconds).padStart(2, '0')} today`;
   } else {
-    headlineElement.textContent = `You will be in Another Hour in ${String(23 - fakeHours).padStart(2, '0')} hours ${String(59 - fakeMinutes).padStart(2, '0')} minutes and ${String(59 - fakeSeconds).padStart(2, '0')} seconds.`;
+    // headlineElement.textContent = `You will be in Another Hour in ${String(23 - fakeHours).padStart(2, '0')} hours ${String(59 - fakeMinutes).padStart(2, '0')} minutes and ${String(59 - fakeSeconds).padStart(2, '0')} seconds.`;
+    headlineElement.textContent = `Another Hour begins in ${String(hoursUntilAnotherHour).padStart(2, '0')}:${String(minutesUntilAnotherHour).padStart(2, '0')}:${String(remainingSecondsUntilAnotherHour).padStart(2, '0')}`;
+
     document.getElementById('remaining-time').textContent = ''; // Clear remaining time when not in Another Hour
     body.classList.remove("dark-mode"); // Remove dark mode
   }
@@ -123,7 +125,7 @@ function updateClock() {
     const minutesUntilAnotherHour = Math.floor((secondsUntilAnotherHour % 3600) / 60);
     const remainingSecondsUntilAnotherHour = secondsUntilAnotherHour % 60;
 
-    headlineElement.textContent = `You will be in Another Hour in ${String(hoursUntilAnotherHour).padStart(2, '0')} hours ${String(minutesUntilAnotherHour).padStart(2, '0')} minutes and ${String(remainingSecondsUntilAnotherHour).padStart(2, '0')} seconds in standard 24-hour time.`;
+    headlineElement.textContent = `Another Hour begins in ${String(hoursUntilAnotherHour).padStart(2, '0')}:${String(minutesUntilAnotherHour).padStart(2, '0')}:${String(remainingSecondsUntilAnotherHour).padStart(2, '0')}`;
 
 
     // Clear remaining time message and remove dark mode
