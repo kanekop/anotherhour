@@ -243,3 +243,14 @@ body.dark-mode #remaining-time {
 }
 
 
+/* Style the timezone selector container */
+.timezone-container {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Adjust the gap between label and dropdown */
+  margin-bottom: 10px; /* Adjust spacing below if needed */
+}
+
+.timezone-container label {
+  font-weight: bold; /* Optional: make label stand out */
+}
